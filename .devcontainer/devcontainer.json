@@ -1,0 +1,50 @@
+{
+  "name": "FastAPI Dev Container",
+  "dockerComposeFile": [
+    "docker-compose-dev.yml"
+  ],
+  "service": "app",
+  // "build": {
+  //   "dockerfile": "Dockerfile",
+  //   "context": "..",
+  //   "args": { "VARIANT": "3-slim" }
+  // },
+  // "runArgs": [ "--userns=keep-id" ],
+  "remoteEnv": {
+    "PODMAN_USERNS": "keep-id"
+  },
+  "remoteUser": "vscode",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [8000],
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "source=profile,target=/home/vscode,type=volume",
+    "source=vscode-server,target=/home/vscode/.vscode-server,type=volume"
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "zsh",
+            "args": ["-l"]
+          }
+        },
+        "[python]": {
+					"editor.formatOnType": true,
+					"editor.formatOnSave": true
+				}
+      },
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "edwinhuish.better-comments-next",
+        "jomeinaster.bracket-peek",
+        "wmaurer.change-case",
+        "YuTengjing.vscode-colorize-plus"
+      ]
+    }
+  }
+}
