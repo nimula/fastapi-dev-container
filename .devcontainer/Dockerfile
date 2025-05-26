@@ -48,6 +48,8 @@ RUN apt-get update \
     curl \
     git \
     zsh \
+    vim \
+    less \
     locales \
     tzdata \
     # Set up timezone

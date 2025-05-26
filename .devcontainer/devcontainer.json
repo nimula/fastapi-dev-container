@@ -33,8 +33,12 @@
         },
         "[python]": {
 					"editor.formatOnType": true,
-					"editor.formatOnSave": true
-				}
+					"editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+          },
+          "editor.defaultFormatter": "charliermarsh.ruff"
+        }
       },
       "extensions": [
         "streetsidesoftware.code-spell-checker",
@@ -42,8 +46,8 @@
         "charliermarsh.ruff",
         "edwinhuish.better-comments-next",
         "jomeinaster.bracket-peek",
-        "wmaurer.change-case",
-        "YuTengjing.vscode-colorize-plus"
+        "YuTengjing.vscode-colorize-plus",
+        "EditorConfig.EditorConfig"
       ]
     }
   }
