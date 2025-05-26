@@ -43,6 +43,7 @@
       "extensions": [
         "streetsidesoftware.code-spell-checker",
         "ms-python.python",
+        "ms-python.vscode-pylance",
         "charliermarsh.ruff",
         "edwinhuish.better-comments-next",
         "jomeinaster.bracket-peek",
